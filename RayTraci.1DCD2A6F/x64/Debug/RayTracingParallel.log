@@ -1,0 +1,39 @@
+﻿  Compiling CUDA source file main.cu...
+  Compiling CUDA source file kernel.cu...
+  
+  D:\Projects\RayTracingParallel>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include"  -G   --keep-dir RayTraci.1DCD2A6F\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdRayTraci.1DCD2A6F\x64\Debug\vc143.pdb" -o D:\Projects\RayTracingParallel\RayTraci.1DCD2A6F\x64\Debug\main.cu.obj "D:\Projects\RayTracingParallel\main.cu" 
+  
+  D:\Projects\RayTracingParallel>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include"  -G   --keep-dir RayTraci.1DCD2A6F\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdRayTraci.1DCD2A6F\x64\Debug\vc143.pdb" -o D:\Projects\RayTracingParallel\RayTraci.1DCD2A6F\x64\Debug\kernel.cu.obj "D:\Projects\RayTracingParallel\kernel.cu" 
+D:\Projects\RayTracingParallel\cuda include/canvas.cuh(47): warning #20050-D: inline qualifier ignored for "__global__" function
+    __declspec(__global__)
+               ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Projects\RayTracingParallel\cuda include/canvas.cuh(47): warning #20050-D: inline qualifier ignored for "__global__" function
+    __declspec(__global__)
+               ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Projects\RayTracingParallel\cuda include/canvas.cuh(47): warning #20050-D: inline qualifier ignored for "__global__" function
+    __declspec(__global__)
+               ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+D:\Projects\RayTracingParallel\cuda include/canvas.cuh(47): warning #20050-D: inline qualifier ignored for "__global__" function
+    __declspec(__global__)
+               ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+  main.cu
+CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+  kernel.cu
+  tmpxft_00009ce4_00000000-7_main.cudafe1.cpp
+  tmpxft_000002d4_00000000-7_kernel.cudafe1.cpp
+     Creating library D:\Projects\RayTracingParallel\x64\Debug\RayTracingParallel.lib and object D:\Projects\RayTracingParallel\x64\Debug\RayTracingParallel.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  RayTracingParallel.vcxproj -> D:\Projects\RayTracingParallel\x64\Debug\RayTracingParallel.exe
