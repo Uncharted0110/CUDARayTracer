@@ -50,7 +50,11 @@ inline float SphereIntersect(const Ray& ray) {
 		return -1.0f;
 	float t1 = (-b - sqrtf(discriminant)) / (2.0f * a);
 	float t2 = (-b + sqrtf(discriminant)) / (2.0f * a);
-	return (t1 < t2 && t1 >= 0) ? t1 : t2;
+	
+	// Return closest positive t value
+	if (t1 >= 0) return t1;
+	if (t2 >= 0) return t2;
+	return -1.0f;
 }
 
 __host__ __device__
@@ -84,7 +88,10 @@ inline float CubeIntersect(const Ray& ray) {
 		}
 		tmin = t1;
 		tmax = t2;
-		return std::make_pair(tmin, tmax);
+		struct { float first; float second; } result;
+		result.first = tmin;
+		result.second = tmax;
+		return result;
 		};
 
 	auto x = checkAxis(ray.origin.x, ray.direction.x);

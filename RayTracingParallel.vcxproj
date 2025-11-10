@@ -84,11 +84,13 @@
     <ClInclude Include="cuda include\canvas.cuh" />
     <ClInclude Include="cuda include\color.cuh" />
     <ClInclude Include="cuda include\intersection.cuh" />
+    <ClInclude Include="cuda include\lighting.cuh" />
     <ClInclude Include="cuda include\material.cuh" />
     <ClInclude Include="cuda include\matrices.cuh" />
     <ClInclude Include="cuda include\math.cuh" />
     <ClInclude Include="cuda include\ray.cuh" />
     <ClInclude Include="cuda include\render.cuh" />
+    <ClInclude Include="cuda include\scene.cuh" />
     <ClInclude Include="cuda include\shape.cuh" />
   </ItemGroup>
   <ItemGroup>

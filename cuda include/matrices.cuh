@@ -197,3 +197,41 @@ __host__ __device__ inline Matrix4x4 Shearing(float xy, float xz, float yx, floa
 __host__ __device__ inline float DegToRad(float deg) {
     return deg * 3.14159265359f / 180.0f;
 }
+
+// Matrix multiplication operator for chaining transformations
+__host__ __device__ inline Matrix4x4 operator*(const Matrix4x4& A, const Matrix4x4& B) {
+    return Multiply(A, B);
+}
+
+// View Transform (Look-At) function
+__host__ __device__ inline Matrix4x4 View_Transform(const Entity& from, const Entity& to, const Entity& up) {
+    Entity forward = Normalize(Subtract(to, from));
+    Entity upn = Normalize(up);
+    Entity left = CrossProduct(forward, upn);
+    Entity true_up = CrossProduct(left, forward);
+    
+    Matrix4x4 orientation;
+    orientation.m[0][0] = left.x;
+    orientation.m[0][1] = left.y;
+    orientation.m[0][2] = left.z;
+    orientation.m[0][3] = 0;
+    
+    orientation.m[1][0] = true_up.x;
+    orientation.m[1][1] = true_up.y;
+    orientation.m[1][2] = true_up.z;
+    orientation.m[1][3] = 0;
+    
+    orientation.m[2][0] = -forward.x;
+    orientation.m[2][1] = -forward.y;
+    orientation.m[2][2] = -forward.z;
+    orientation.m[2][3] = 0;
+    
+    orientation.m[3][0] = 0;
+    orientation.m[3][1] = 0;
+    orientation.m[3][2] = 0;
+    orientation.m[3][3] = 1;
+    
+    return orientation * Translation(-from.x, -from.y, -from.z);
+}
+
+#define PI 3.14159265359f

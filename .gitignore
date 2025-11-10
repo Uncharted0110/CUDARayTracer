@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CopilotSnapshots/8F1BAB9489CAC94B842109242E2DF2A4
+/.vs/RayTracingParallel/copilot-chat/8341687c/sessions
+/.vs/RayTracingParallel/CopilotIndices/17.14.1290.42047
+/.vs/RayTracingParallel/FileContentIndex
+/.vs/RayTracingParallel/v17/ipch/AutoPCH/1ee5cec6a8967c9a
+/.vs/RayTracingParallel/v17/ipch/AutoPCH
+/.vs/
+/.vs/RayTracingParallel/v17/Browse.VC.db
+/.vs/RayTracingParallel/v17/Browse.VC.db-shm
+.vs/RayTracingParallel/v17/Browse.VC.opendb
